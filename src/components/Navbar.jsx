@@ -8,7 +8,7 @@ const Navbar = () => {
 
         <nav>
             <ul className='contenedorNavbar'>
-                    <li><Link className='menu-link' to="/">Home</Link></li>
+                    <li><Link className='menu-link' to="/portfolio-react">Home</Link></li>
                     <li><Link className='menu-link' to="/about">About</Link></li>
                     <li><Link className='menu-link' to="/education">Education</Link></li>
                     <li><Link className="menu-link" to="/portfolio">Portfolio</Link></li>
