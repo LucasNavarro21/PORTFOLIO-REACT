@@ -14,25 +14,25 @@ const Portfolio = () => {
 
             <div className="container-proyecto">
               <img src={imgJS} alt="" className="image-proyecto" />
-              <a href="" className='title-proyecto'>Encryptor</a>
+              <a href="https://lucasnavarro21.github.io/encriptador/" className='title-proyecto'>Encryptor</a>
             </div>
         
         
             <div className="container-proyecto">
               <img src={imgPHP} alt="" className="image-proyecto" />
-              <a href="" className='title-proyecto'>Crud PHP</a>
+              <a href="https://github.com/LucasNavarro21/asistencia" className='title-proyecto'>Crud PHP</a>
             </div>
           </div>
 
           <div className="container-proyectos-fila-1">
             <div className="container-proyecto">
               <img src={imgExcel} alt="" className="image-proyecto" />
-              <a href="" className='title-proyecto'>Data Filter</a>
+              <a href="http://enterprisedata.22web.org/index.php?i=2" className='title-proyecto'>Data Filter</a>
             </div>
 
             <div className="container-proyecto">
               <img src={imgPHP} alt="" className="image-proyecto" />
-              <a href="" className='title-proyecto'>Task list</a>
+              <a href="https://github.com/LucasNavarro21/todoapp" className='title-proyecto'>Task list</a>
             </div>
           </div>
 
