@@ -1,38 +1,1184 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    background-color: white;
+    font-family: Urbanist,sans-serif;
+    margin: 0;
+
+}
+p, h2, h3, h5, h1, h4{
+    margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.contenedorNavbar{
+
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin: 0;
+    padding: 1.5rem;
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    /* flex-direction: row; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+.contenedorNavbar a{
+    text-decoration: none;
+    color: white;
+
+}
+.contenedorNavbar li{
+    list-style-type: none;
+    background-color: black;
+    padding: 1.3rem;
+    box-shadow: 4px 6px 7px 3px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.contenedorNavbar li:hover{
+    transform: translateY(10px);
+}
+
+.presentacion{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background-image: url(https://excursionesenushuaia.com/wp-content/uploads/2022/04/009871_1-min.jpg); */
+    background: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0) 57%, rgba(0, 0, 0, 1) 100%), 
+    url(https://excursionesenushuaia.com/wp-content/uploads/2022/04/009871_1-min.jpg);    background-position: 10% 79%;
+    filter: grayscale(100%);
+    background-size: cover;
+
+    /* background-attachment: fixed; */
+}
+.presentacion h1{
+    color: white;
+    font-weight: bolder;
+    font-style: normal;
+    font-size: clamp(3.34rem, 2.45rem + 4.43vw, 5.61rem);
+    letter-spacing: 0.5rem;
+}
+
+.presentacion h4{
+    color: white;
+    letter-spacing: 0.2rem;
+    font-size: 2rem;
+}
+
+.presentacion a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    border: white 0.2rem solid;
+    padding: 0.5rem;
+}
+
+/* ------ */
+
+.container-padre-about {
+    position: relative; /* Necesario para el pseudoelemento absoluto */
+    overflow: hidden; /* Asegura que el pseudoelemento no se desborde */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  .container-padre-about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+    background: url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGRhdGF8ZW58MHx8MHx8fDA%3D");
+    background-size: cover;
+    /* background-color: rgba(0, 0, 0, 0.747); */
+    filter: grayscale(100%);
+    z-index: -1; /* Coloca el fondo detrás del contenido */
+    opacity: 1; /* Ajusta la opacidad si quieres que el fondo sea más claro */
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+.container-about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding:  10rem 20rem 0 20rem; */
+    width: 80%;
+    gap: 2rem;
+    margin-top: 7rem;
+    background-color: #000000ad;
+    padding: 2rem 2rem 2rem 0;
 }
+
+.container-about {
+    position: relative; /* Asegura que el contenido esté encima del pseudoelemento */
+    z-index: 1;
+    background-color: rgba(37, 36, 36, 0.462);
+    backdrop-filter: blur(3px); /* Aplica el filtro de desenfoque */
+
+
+  }
+
+.img-about{
+    width: 18rem;
+    border-radius: 0 1rem 1rem 0;
+}
+
+.title-about{
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+}
+
+.description-bullets{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.description-about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    /* flex: 1; */
+    
+}
+
+.title-description-about{
+    font-size: 2rem;
+    background: black;
+    color: white;
+    padding: 1.2rem;
+    /* border-radius: 0.6rem; */
+    box-shadow: 4px 6px 7px 3px rgba(0, 0, 0, 0.5);
+}
+
+.description-row-1, .description-row-2{
+    background: black;
+    color: white;
+    padding: 1.2rem;
+    /* border-radius: 0.6rem; */
+    box-shadow: 4px 6px 7px 3px rgba(0, 0, 0, 0.5);
+    font-size: 1.3rem;
+    flex: 1;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+}
+
+.description-row-1 li, .description-row-2 li{
+    margin: 0.7rem;
+    /* text-align: center; */
+}
+
+
+.description-long-about{
+
+    background: black;
+    color: white;
+    padding: 1.2rem;
+    /* border-radius: 0.6rem; */
+    box-shadow: 4px 6px 7px 3px rgba(0, 0, 0, 0.5);
+    font-size: 1.2rem;
+}
+
+
+.skills-about{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+
+}
+
+.skills-about-cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    gap: 1rem;
+    background-color:rgba(37, 36, 36, 0.462);
+    padding: 1rem;
+
+}
+
+.skills-about-card{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color:rgba(209, 200, 200, 0.432);
+    padding: 0.5rem;
+    width: 11.3rem;
+    gap: 0.5rem;
+
+}
+
+.skills-img{
+    width: 3.8rem;
+}
+
+.skills-name{
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: gainsboro;
+}
+
+/* ---- */
+
+.container-padre-edu::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    z-index: -1; /* Coloca el fondo detrás del contenido */
+    opacity: 1; /* Ajusta la opacidad si quieres que el fondo sea más claro */
+
+}
+
+.container-padre-edu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url(https://images.theconversation.com/files/45159/original/rptgtpxd-1396254731.jpg?q=30&usm=12&cs=strip&w=2560&auto=format);
+    background-size: cover;
+    /* background-color: rgba(0, 0, 0, 0.747); */
+    filter: grayscale(100%);
+}
+
+.container-education-cards{
+    background-color: rgba(37, 36, 36, 0.462);
+    /* width: 60%; */
+    padding: 2rem;
+    margin-top: 7rem;
+}
+.container-education-card {
+    display: flex;
+    flex-direction: column; /* Apila los elementos verticalmente */
+    /* width: 80%; */
+    max-width: 700px; /* Opcional: establece un ancho máximo para el diseño */
+    margin: 0 auto; /* Centra el contenedor si es necesario */
+    box-sizing: border-box; /* Incluye padding y borde en el cálculo del ancho */
+    background-color: rgba(255, 255, 255, 0.622);
+    font-size: 1.5rem;
+    box-shadow: 0 0 14px 18px rgb(0 0 0); /* Efecto de luz */
+    margin: 3rem;
+
+  }
+
+
+  
+  .container-title-date-edu {
+    display: flex;
+    width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+    box-sizing: border-box;
+    font-size: 1.3rem;
+  }
+  
+  .container-title-degree {
+    width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+    box-sizing: border-box;
+    font-size: 2rem;
+    
+  }
+
+
+
+.title-institute,
+.title-date,
+.title-degree {
+
+    padding: 2rem;
+}
+
+.title-date{
+    
+    display: flex;
+    align-items: center;
+    border-bottom: 0.15rem solid black;
+    border-left: 0.15rem solid black;
+    border-top: 0.3rem solid black;
+    border-right: 0.3rem solid black;
+}
+
+.title-institute{
+
+    border-bottom: 0.15rem solid black;
+    border-left: 0.3rem solid black;
+    border-top: 0.3rem solid black;
+    border-right: 0.15rem solid black;
+    flex: 1;
+}
+
+.title-degree{
+
+    border-bottom: 0.3rem solid black;
+    border-left: 0.3rem solid black;
+    border-top: 0.15rem solid black;
+    border-right: 0.3rem solid black;
+    text-align: center;
+    font-weight: 700;
+}
+
+
+/* ---- */
+
+
+.container-padre-portfolio, .container-padre-contact {
+    position: relative; /* Necesario para el pseudoelemento absoluto */
+    overflow: hidden; /* Asegura que el pseudoelemento no se desborde */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* height: 100vh; */
+  }
+
+  .container-padre-portfolio::before, .container-padre-contact::before  {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+
+    background: url("https://assets.asana.biz/transform/e0185bf0-6e42-429a-b5bc-e560662a984a/article-project-management-project-administrator-2x");
+    background-size: cover;
+    /* background-color: rgba(0, 0, 0, 0.747); */
+    filter: grayscale(100%);
+    z-index: -1; /* Coloca el fondo detrás del contenido */
+    opacity: 1; /* Ajusta la opacidad si quieres que el fondo sea más claro */
+  }
+
+.container-portfolio{
+    background-color: rgba(37, 36, 36, 0.462);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem;
+    padding: 5rem;
+    margin-top: 8rem;
+    backdrop-filter: blur(3px);
+    flex-wrap: wrap;
+
+}
+
+.container-proyectos{
+    
+    /* padding: 0 1.5rem 3rem 1.5rem; */
+    /* margin-top: 7rem; */
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    /* gap: 1rem; */
+}
+.container-proyecto{
+    display: flex;
+    /* align-items: center;
+    justify-content: flex-start; */
+    background-color: rgba(209, 200, 200, 0.432);
+    padding: 4rem;
+    /* width: 11.3rem;
+    height: 3rem; */
+    /* gap: 0.5rem; */
+    margin: 1rem;
+    gap: 1rem;
+    min-width: 450px;   
+}
+
+.title-portfolio{
+    font-size: 3.5rem;
+    color: gainsboro;
+    font-weight: 700;
+}
+
+.image-proyecto{
+    width: 4rem;
+}
+
+.title-proyecto, .title-contact{
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: gainsboro;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+/* ---- */
+
+.container-contact{
+    display: flex;
+    /* align-items: center;
+    justify-content: flex-start; */
+    background-color: rgba(209, 200, 200, 0.432);
+    padding: 4rem;
+    /* width: 11.3rem;
+    height: 3rem; */
+    /* gap: 0.5rem; */
+    margin: 1rem;
+    gap: 1rem;
+    min-width: 450px; 
+}
+.title-contact {
+    position: relative; /* Necesario para usar el pseudoelemento ::after */
+    text-decoration: none; /* Eliminar subrayado del enlace */
+    color: gainsboro; /* Color inicial del texto */
+    transition: color 0.3s ease; /* Transición suave para el cambio de color */
+  }
+  
+  .title-contact::after {
+    content: "Ciudadela, Buenos Aires"; /* Texto que aparecerá al hacer hover */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: transparent; /* Inicialmente invisible */
+    transition: color 2s ease; /* Transición suave para el cambio de color */
+  }
+
+  #email::after{
+    content: "navarrolucas4668@gmail.com";
+  }
+
+  #linkedin{
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: gainsboro;
+    text-decoration: none;
+    display: flex;
+    width: 100%;
+  }
+
+  #linkedin::after{
+
+    content: "Ciudadela, Buenos Aires"; /* Texto que aparecerá al hacer hover */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: transparent; /* Inicialmente invisible */
+    transition: color 2s ease; /* Transición suave para el cambio de color */ 
+
+  }
+
+  #linkedin::after {
+    content: "Linkedin"; /* Texto que aparecerá al hacer hover */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: transparent; /* Inicialmente invisible */
+    transition: color 2s ease; /* Transición suave para el cambio de color */
+  }
+
+  #linkedin:hover::after{
+    content: "Linkedin";
+    color: #0d6efd;
+    /* transition: color 2s ease; */
+  }
+
+  
+
+  #number::after{
+    content: "+54 11 2753 5916";
+  }
+  
+  .title-contact:hover::after {
+    color: gainsboro; /* Mostrar el texto al hacer hover */
+  }
+  
+  .title-contact:hover {
+    color: transparent; /* Hacer el texto original invisible */
+  }
+  
+
+/* ---- */
+
+.fondo{
+    height: 10rem;
+    /* background-image: url(https://masterpiecer-images.s3.yandex.net/5fbafcee353e815:upscaled);
+    background-size: cover;
+    background-attachment: fixed; */
+}
+
+/* ---- */
+.fondoGrande{
+    background-image: url(https://masterpiecer-images.s3.yandex.net/5fbafcee353e815:upscaled);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.containerProyectosSeccion{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    align-content: center;
+    padding: 0 6rem 0 6rem;
+    background-size: cover;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: black;
+    height: 78vh;
+}
+
+.tituloProyecto{
+    position: absolute;
+    right: 89%;
+    z-index: 1;
+    font-size: 3.2rem;
+    line-height: 3.4rem;
+    font-weight: 900;
+}
+
+.containerProyectos{
+    flex-grow: 10;
+}
+
+.containerProyectosSeccion:hover .tituloProyecto span{
+
+    /* line-height: 2.5rem; */
+    color: white;
+
+}
+
+
+.tituloProyecto span{
+    display: block;
+    transition: 2s;
+
+}
+.containerProyectosSeccion h2{
+    text-align: center;
+    font-size: 3rem;
+    color: whitesmoke;
+}
+
+.proyectos{
+    position: relative;
+    background-size: cover;
+    background-position: 50% 50%;
+    /* background-image: url(img/asistencias.PNG); */
+    margin: 0.5rem;
+    width: 100%;
+}
+
+.imagenProyecto{
+    /* height: 34rem; */
+    width: 34rem;
+}
+
+.card{
+    /* padding: 1rem; */
+    /* padding-bottom: 1.5rem; */
+    width: 100%;
+    /* height: 17rem; */
+}
+
+
+.linkProyecto{
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    background-color:#ffffff1c;
+    border: none;
+    border-radius: 0;
+    
+}
+
+.linkGithub{
+    position: absolute;
+    right: 9%;
+    bottom: 0%;
+    background-color:#ffffff1c;
+    border: none;
+    border-radius: 0;
+}
+
+/* ---- */
+.card-body{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    color: white;
+    padding: 0;
+    gap: 5rem;
+
+}
+
+.card-body a{
+    font-size: 3.7rem;
+    text-decoration: none;
+    color: gray;
+    transition: letter-spacing 1s ease; 
+
+}
+
+.card-body a:hover{
+    transition: 1s;
+    letter-spacing: 0.3rem;
+}
+.card-body .card-title{
+    font-size: 2rem;
+}
+
+.card-body .card-text{
+    font-size: 1.4rem;
+}
+
+#asistencias, #todoapp, #Newsletter{
+    background-color: rgba(0, 0, 0, 0.8);
+
+}
+
+
+.redes{
+    background: 
+    linear-gradient(to top, rgba(0, 0, 0, 0) 74%, rgba(0, 0, 0, 0.8) 100%);
+    background-color: rgb(210, 210, 210);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    
+}
+
+.redes h2{
+    font-size: 3rem;
+}
+
+.redesLogos{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 1rem;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.red{
+    transform: scale(1);
+    transition: 1s;
+}
+.red:hover{
+    transform: scale(1.3);
+    transition: 1s;
+}
+
+.json{
+    width: 7em;
+    height: 7em;
+}
+
+
+/* ---- */
+
+.sticky-sidebar {
+    position: fixed;
+    top: 20px;
+    right: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    /* border-radius: 10px; */
+  }
+  .sticky-sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 10px 0;
+    text-align: center;
+  }
+  .sticky-sidebar a:hover {
+    color: #0d6efd; /* Color de hover */
+  }
+  .sticky-sidebar i {
+    font-size: 24px;
+  }
+
+  /* ---- */
+
+.biografia{
+    /* padding: 5rem; */
+    /* background-color: black; */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bio1{
+    background-color: black;
+    color: white;
+    transition: 1s;
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* .bio1:hover{
+    background-color: white;
+    color: black;
+    transition: 1s;
+}
+
+.bio2{
+    background-color: white;
+    color: black;
+    transition: 1s;
+    padding: 5rem;
+}
+.bio2:hover{
+    background-color: black;
+    color: white;
+    transition: 1s;
+} */
+
+.biografia h4{
+    text-wrap: balance;
+    font-weight: 500;
+    font-size: 1.3rem;
+    /* color: whitesmoke; */
+    line-height: 1.5;
+    width: 50%;
+}
+
+.footer{
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbarFooter ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    height: 100%;
+
+}
+
+.navbarFooter ul li{
+    list-style-type: none;
+    
+}
+
+.navbarFooter ul a{
+    text-decoration: none;
+    font-size: 3rem;
+    color: gray;
+}
+
+
+
+.containerRedesFooter{
+    display: flex;
+    gap: 6rem;
+}
+         
+.redesFooter{
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.github {
+    color: black;
+}
+
+.mail{
+    color: gray;
+}
+.footer h4{
+    font-size: 1rem;
+    /* font-family: 'Rubik', sans-serif; */
+    font-weight: 500;
+    unicode-bidi: isolate;
+}
+
+/* Asistencias */
+
+
+.Contenedor-Proyectos{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Contenedor-Proyectos-Texto, .Contenedor-Proyectos-Texto-Secundario, .Contenedor-Proyectos-Texto-Terciario {
+    width: 60%;
+    margin: 1.9rem;
+}
+
+.Contenedor-Proyectos-Texto-Terciario{
+    margin-bottom: 2rem;
+}
+
+.Contenedor-Proyectos-Imagen{
+    width: 60%;
+}
+
+.Contenedor-Proyectos-Imagen img{
+    width: -webkit-fill-available;
+    height: 28rem;
+}
+
+.Contenedor-Proyectos h5{
+    color: white;
+    font-size: 1.3rem;
+}
+
+.Contenedor-Proyectos p{
+    color: gray;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.Contenedor-Proyectos .Titulo-Texto{
+    color: white;
+    font-weight: 500;
+}
+
+.Texto-Tecnologias-Repositorio{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Texto-Tecnologias-Repositorio i{
+    color: white;
+
+}
+
+.Texto-Tecnologias-Repositorio a{
+    color: white;
+    text-decoration: none;
+    border: 1.5px solid gray;
+    padding: 0.4rem;
+    border-radius: 0.6rem;
+    display: flex;
+    font-size: 0.9rem;
+    gap: 0.6rem;
+    justify-content: center;
+    width: 7.8rem;
+    align-items: center;
+
+}
+
+
+@media only screen and (max-width: 768px){
+    
+    .bio1{
+        padding: 2rem;
+    }
+    .biografia h4{
+        width: 85%;
+    }
+
+    .redesLogos{
+        gap: 0.9rem;
+    }
+
+    .fa-7x {
+        font-size: 5em !important;
+    }
+
+
+    .tituloProyecto{
+
+        font-size: 2.8rem;
+        line-height: 2.9rem;
+
+    }
+    .card-body{
+        font-size: 3.3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        
+    }
+
+    .containerRedesFooter{
+        flex-direction: column;
+        gap: 0;
+        align-items: center;
+    }
+
+    .navbarFooter ul a {
+        font-size: 2.6rem;
+    }
+
+    .card-body{
+        align-items: center;
+    }
+
+    .Contenedor-Proyectos-Texto, .Contenedor-Proyectos-Texto-Secundario, .Contenedor-Proyectos-Texto-Terciario{
+        width: 80%;
+    }
+
+    .Contenedor-Proyectos-Imagen{
+        width: 80%;
+    }
+
+    .Contenedor-Proyectos-Imagen img{
+        height: 17rem;
+    }
+
+    .Contenedor-Proyectos h5{
+        font-size: 1.1rem;
+    }
+
+    .Contenedor-Proyectos p{
+        font-size: 1.1rem;
+    }
+
+    .Contenedor-Proyectos-Texto, .Contenedor-Proyectos-Texto-Secundario, .Contenedor-Proyectos-Texto-Terciario {
+        /* width: 60%; */
+        margin: 1rem;
+    }
+
+    .container-about{
+        flex-direction: column;
+    }
+    .description-bullets{
+        flex-direction: column;
+    }
+
+    .container-proyecto{
+        padding: 0.7rem;
+    }
+
+    .title-proyecto{
+        font-size: 2.7rem;
+    }
+
+
+}
+
+
+
+@media only screen and (max-width: 430px) {
+    .bio1, .bio2{
+        padding: 2rem;
+
+    }
+
+    .bio1 h4{
+        width: 90%;
+    }
+    .bio1 h4, .bio2 h4{
+        font-size: 1rem;
+    }
+
+    .fa-7x{
+        font-size: 4em !important;
+    }
+    .json{
+        font-size: 0.5em ;
+
+    }
+
+    .containerProyectosSeccion{
+        padding: 0;
+    }
+
+    .proyectos{
+         margin: 0;
+        
+    }
+    .card-body{
+        font-size: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        
+    }
+
+    .card-body a{
+        width: 100%;
+        font-size: 2.6rem;
+    }
+
+    .tituloProyecto{
+        font-size: 2.3rem;
+        line-height: 2.3rem;
+    
+    }
+    .card{
+        display: flex;
+        align-items: center;
+    }
+    .linkGithub{
+        right: 25%;
+    }
+
+    .containerRedesFooter{
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .navbarFooter ul a{
+    font-size: 1.7rem;    
+}
+
+    .redesFooter{
+        justify-content: center;
+    }
+    .footer h4{
+        margin: 0.9rem;
+    }
+
+    .Contenedor-Proyectos-Texto{
+        margin-top: 4rem;
+    }
+    .Contenedor-Proyectos-Imagen img{
+        height: 11rem;
+    }
+
+    /* education */
+
+    .container-education-cards{
+        padding: 1.7rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10rem;
+    }
+
+    .container-education-card{
+        margin: 1rem;
+        width: 100%;
+    }
+    .container-title-degree{
+        font-size: 1.5rem;
+    }
+
+    .title-institute, .title-date, .title-degree {
+        padding: 1.1rem;
+        font-weight: 600;
+        flex: 1;
+    }
+
+    .title-degree{
+        padding: 0.8rem;
+    }
+
+    .container-title-date-edu{
+        font-size: 0.8rem;
+    }
+
+    /* navbar */
+
+    .contenedorNavbar{
+        flex-wrap: wrap;
+        padding: 0;
+        /* margin-top: 2rem; */
+        gap: 0.8rem;
+    }
+
+    /* about */
+
+    .container-about{
+        flex-direction: column;
+        padding: 1.4rem;
+        width: 76.8%;
+        margin-top: 13rem;
+    }
+
+    .description-about{
+        align-items: center;
+    }
+    .title-description-about{
+        font-size: 1.2rem;
+    }
+
+    .description-row-1, .description-row-2{
+        font-size: 1rem;
+    }
+
+    .description-long-about{
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+        line-height: 1.5rem;
+    }
+
+    .description-bullets{
+        flex-direction: column;
+    }
+    .skills-about-card{
+        width: 16.3rem;
+    }
+
+    /* portfolio */
+
+    .container-portfolio{
+        margin: 0;
+        margin-top: 11rem;
+        padding: 2rem;
+    }
+
+    .container-proyectos{
+        flex-direction: column;
+    }
+
+    .container-proyecto, .container-contact{
+        min-width: 0;
+        padding: 1.3rem;
+        gap: 0.7rem;
+        
+    }
+
+    .image-proyecto{
+        width: 3rem;
+    }
+
+    .title-proyecto, .title-contact{
+        font-size: 1.2rem;
+
+    }
+
+    .container-portfolio{
+        padding: 0;
+        width: 100%;
+    }
+    #linkedin{
+        font-size: 1.2rem;
+    }
+
+    /* .container-contact{
+        width: 90%;
+    } */
+
+    .container-proyectos{
+        width: 100%;
+    }
+}
+
