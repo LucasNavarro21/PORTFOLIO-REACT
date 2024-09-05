@@ -9,32 +9,32 @@ const Contact = () => {
           <div className="container-proyectos-fila-1">
             <div className="container-contact">
               {/* <img src={imgJS} alt="" className="image-proyecto" /> */}
-              <a href="" className="title-contact">
+              <p href="" className="title-contact">
                 My Adress
-              </a>
+              </p>
             </div>
 
             <div className="container-contact" >
               {/* <img src={imgPHP} alt="" className="image-proyecto" /> */}
-              <a href="" className="title-contact" id="email">
+              <p href="" className="title-contact" id="email">
                 Email Me
-              </a>
+              </p>
             </div>
           </div>
 
           <div className="container-proyectos-fila-1">
             <div className="container-contact">
               {/* <img src={imgExcel} alt="" className="image-proyecto" /> */}
-              <a href="" className="title-contact" id="linkedin">
+              <a href="https://www.linkedin.com/in/lucas-navarro-5a2243206/" className="title-contact" id="linkedin">
                 Linkedin
               </a>
             </div>
 
             <div className="container-contact">
               {/* <img src={imgPHP} alt="" className="image-proyecto" /> */}
-              <a href="" className="title-contact" id="number">
+              <p  className="title-contact" id="number">
                 Call Me
-              </a>
+              </p>
             </div>
           </div>
         </div>
