@@ -1210,5 +1210,9 @@ p, h2, h3, h5, h1, h4{
     .container-proyectos{
         width: 100%;
     }
+
+    .container-padre-portfolio, .container-padre-contact{
+        height: 100vh;
+    }
 }
 
